@@ -6,7 +6,7 @@ class CatsController < ApplicationController
 
   def serve
     @incoming = true
-    CatServer.perform_async current_user.id
+    CatServer.perform_later current_user
     render :index
   end
 end

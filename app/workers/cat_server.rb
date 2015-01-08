@@ -1,9 +1,7 @@
-class CatServer
-  include Sidekiq::Worker
+class CatServer < ActiveJob::Base
+  queue_as :default
 
-  def perform user_id
-    user = User.find_by_id user_id
-    return unless user
+  def perform user
     user.cat_me!
   end
 end
