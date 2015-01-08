@@ -15,6 +15,9 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'httparty'
 gem 'slim-rails'
 
+gem 'sidekiq'
+gem 'sinatra'
+
 group :development, :test do
   gem 'pry'
   gem 'byebug'
